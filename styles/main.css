@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fceed5;
+  font-family: 'Poppins', sans-serif;
+}
+
+header.navbar-container {
+  max-width: 1536px;
+  padding-block: 1.125rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.navbar-container .logo img {
+  width: 100%;
+}
+
+header.navbar-container .nav-list ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #002a48;
+}
+
+header.navbar-container .nav-list li a:hover {
+  font-weight: 500;
+  color: #003459;
+}
+
+header.navbar-container .nav-list li a.active {
+  font-weight: 500;
+  color: #003459;
+}
+
+header.navbar-container button {
+  font-size: 1rem;
+  border-style: none;
+}
+
+header.navbar-container button.btn-login {
+  background-color: #f7dba7;
+  padding: 8px 20px;
+  border-radius: 32px;
+}
+
+header.navbar-container button.btn-login:hover {
+  background-color: pink;
+}
+
+header.navbar-container .icon {
+  background-color: transparent;
+  font-size: 18px;
+}
+
+main.container {
+  max-width: 1536px;
+  padding-block: 1.125rem;
+  margin-inline: auto;
+  display: flex;
+}
+
+main.container .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main.container .hero .hero-text {
+  width: 42%;
+}
+
+main.container .hero-text h1 {
+  color: #003459;
+  font-size: 3.375rem;
+  font-weight: 500;
+  line-height: 62px;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+main.container .hero-text p {
+  color: #335d7a;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------- resposnive css--------------------------------------------------------------- */
+/* max-width 640px, mobile-only styles *base* */
+/* max-width 660px, mobile-only styles */
+@media only screen and (max-width: 41.25em) {
+  header.navbar-container {
+    justify-content: space-between;
+    padding-block: 0.6rem;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  header.navbar-container .nav-list ul {
+    display: none;
+  }
+
+  header.navbar-container .nav-list.open ul {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    gap: 0;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fceed5;
+  }
+
+  header.navbar-container .nav-list.open ul li {
+    padding: 10px;
+  }
+
+  header.navbar-container .nav-list li a {
+    padding: 0.4rem 0.6rem;
+  }
+
+  header.navbar-container button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+/* min-width 641px, medium screens *base* */
+/* min-width 661px, medium screens */
+@media only screen and (min-width: 41.313em) {
+  header.navbar-container {
+    justify-content: space-between;
+    margin: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  header.navbar-container .nav-list li a {
+    padding: 0.5rem 0.6rem;
+  }
+
+  header.navbar-container button {
+    background-color: #f7dba7;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  header.navbar-container .icon {
+    display: none;
+  }
+}
+
+/* min-width 641px and max-width 1024px */
+/* @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+} */
+
+/* @media all and (min-width: 768px) and (max-width: 1024px) { } */
+
+/* @media all and (min-width: 1024px) and (max-width: 1280px) { } */
