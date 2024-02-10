@@ -1,13 +1,80 @@
+:root {
+  --primary: #003459;
+  --primary-dark: #002a48;
+  --primary-medium: #00528c;
+  --primary-light: #0078cd;
+  --secondary: #f7dba7;
+  --secondary-dark: #eec77e;
+  --secondary-medium: #f1d092;
+  --secondary-light: #fceed5;
+  --neutral-00: #fdfdfd;
+  --neutral-10: #ebeeef;
+  --neutral-20: #ccd1d2;
+  --neutral-40: #99a2a5;
+  --neutral-60: #667479;
+  --neutral-80: #242b33;
+  --blue: #00a7e7;
+  --orange: #ff912c;
+  --green: #34c759;
+  --pink-red: #ff564f;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-body {
-  background-color: #fceed5;
-  font-family: 'Poppins', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
+body,
+li,
+a {
+  background-color: #fceed5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.btn {
+  font-size: 1rem;
+  border-style: none;
+}
+.btn.btn-sm {
+  padding: 8px 16px 8px 16px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 4px;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+
+/* 
 header.navbar-container {
   max-width: 1536px;
   padding-block: 1.125rem;
@@ -49,11 +116,6 @@ header.navbar-container .nav-list li a.active {
   color: #003459;
 }
 
-header.navbar-container button {
-  font-size: 1rem;
-  border-style: none;
-}
-
 header.navbar-container button.btn-login {
   background-color: #f7dba7;
   padding: 8px 20px;
@@ -81,11 +143,9 @@ main.container .hero {
   justify-content: space-between;
   align-items: center;
 }
-
 main.container .hero .hero-text {
   width: 42%;
 }
-
 main.container .hero-text h1 {
   color: #003459;
   font-size: 3.375rem;
@@ -99,11 +159,21 @@ main.container .hero-text p {
   font-size: 1.125rem;
   line-height: 1.6;
 }
+main.container .hero-action {
+  display: flex;
+  gap: 18px;
+}
+main.container .hero-action button {
+  background-color: #ff564f;
+  color: #fdfdfd;
+  padding: 14px 32px 14px 32px;
+  border-radius: 32px;
+} */
 
 /* --------------------------------------------- resposnive css--------------------------------------------------------------- */
 /* max-width 640px, mobile-only styles *base* */
 /* max-width 660px, mobile-only styles */
-@media only screen and (max-width: 41.25em) {
+/* @media only screen and (max-width: 41.25em) {
   header.navbar-container {
     justify-content: space-between;
     padding-block: 0.6rem;
@@ -139,11 +209,11 @@ main.container .hero-text p {
     font-size: 0.9rem;
     padding: 6px 12px;
   }
-}
+} */
 
 /* min-width 641px, medium screens *base* */
 /* min-width 661px, medium screens */
-@media only screen and (min-width: 41.313em) {
+/* @media only screen and (min-width: 41.313em) {
   header.navbar-container {
     justify-content: space-between;
     margin: auto;
@@ -169,7 +239,7 @@ main.container .hero-text p {
   header.navbar-container .icon {
     display: none;
   }
-}
+} */
 
 /* min-width 641px and max-width 1024px */
 /* @media only screen and (min-width: 40.063em) and (max-width: 64em) {
