@@ -24,40 +24,43 @@
     />
   </head>
   <body>
-    <header class="container flex justify-around items-center">
+    <header class="container mx-auto flex justify-between items-center">
       <figure>
         <img src="/assets/Logo.png" alt="CarePet" draggable="false" />
       </figure>
       <nav>
         <ul class="flex gap-8">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Category</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About us</a></li>
+          <li><a href="#" class="text-primary font-medium text-lg">Home</a></li>
+          <li><a href="#" class="text-primary">Category</a></li>
+          <li><a href="#" class="text-primary">Shop</a></li>
+          <li><a href="#" class="text-primary">Blog</a></li>
+          <li><a href="#" class="text-primary">About us</a></li>
         </ul>
       </nav>
-      <button class="btn btn-sm">Sign up</button>
-      <!-- <div class="fa-solid fa-bars icon" id="toggle-menu"></div> -->
+      <div class="flex items-center gap-4">
+        <button class="btn btn-sm bg-secondary rounded-full">Sign up</button>
+        <div class="fa-solid fa-bars icon" id="toggle-menu"></div>
+      </div>
     </header>
 
-    <!-- 
-    <main class="container">
-      <section class="hero">
-        <div class="hero-text">
-          <h1>Our family extends a warm welcome to your cherished pet.</h1>
-          <p>
+    <main>
+      <section class="container flex justify-between items-center">
+        <div class="flex flex-col gap-4">
+          <h1 class="text-primary text-5xl font-medium capitalize">
+            Our family extends a warm welcome to your cherished pet.
+          </h1>
+          <p class="text-primary-400">
             Helping you raise a clean, healthy, and well-behaved pet. We also
             offer convenient pet boarding services.
           </p>
-
-          <div class="hero-action">
-            <button>Contact us</button>
-            <div class="fa-solid fa-play"></div>
+          <div class="flex items-center gap-4">
+            <button class="btn btn-md bg-pink-red rounded-full text-neutral-00">
+              Contact us
+            </button>
+            <div class="fa-solid fa-play text-lg"></div>
           </div>
         </div>
-
-        <figure class="hero-img">
+        <figure>
           <img
             src="./assets/image/hero-image.png"
             alt="medical-checkup"
@@ -67,7 +70,7 @@
       </section>
     </main>
 
-    <footer>
+    <!-- <footer>
       <h1>footer</h1>
     </footer> -->
 

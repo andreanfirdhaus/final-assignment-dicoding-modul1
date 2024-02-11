@@ -1,5 +1,5 @@
 const hamburgerToggle = document.querySelector("#toggle-menu")
-const navigation = document.querySelector(".nav-list")
+const navigation = document.querySelector("nav")
 
 hamburgerToggle.addEventListener("click", onHamburgerClick);
 
