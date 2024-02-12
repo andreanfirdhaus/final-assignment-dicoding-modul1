@@ -9,5 +9,4 @@ function onHamburgerClick() {
     } else {
         navigation.classList.remove("open")
     }
-    alert("toggle sudah diklik")
 }

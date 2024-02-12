@@ -4,8 +4,8 @@
 */
 @media (max-width: 480px) {
   header.container {
-    padding: 4px;
-    margin: auto;
+    padding: 12px 4px 12px 4px;
+    margin: 0 auto;
   }
   header.container nav.open ul {
     display: flex;
@@ -20,6 +20,12 @@
   }
   header.container nav > ul {
     display: none;
+  }
+  header.container div > button {
+    display: none;
+  }
+  header.container #toggle-menu {
+    padding: 8px;
   }
 
   main section.container {
@@ -51,7 +57,7 @@
 */
 @media (min-width: 481px) and (max-width: 767px) {
   header.container {
-    padding: 4px;
+    padding: 12px 4px 12px 4px;
     margin: auto;
   }
   header.container nav.open ul {
@@ -67,6 +73,10 @@
   }
   header.container nav > ul {
     display: none;
+  }
+
+  header.container ul.gap-8 {
+    gap: 1.5rem;
   }
 
   header.container #toggle-menu {

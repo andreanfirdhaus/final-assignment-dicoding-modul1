@@ -4,8 +4,17 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  header.container {
+    padding: 12px 4px 12px 4px;
+    margin: auto;
+  }
+
   header.container #toggle-menu {
     display: none;
+  }
+
+  header.container ul.gap-8 {
+    gap: 1.5rem;
   }
 }
 

@@ -4,8 +4,20 @@
 */
 
 @media (min-width: 1281px) {
+  header.container {
+    padding: 12px 4px 12px 4px;
+    margin: auto;
+  }
+
   header.container #toggle-menu {
     display: none;
+  }
+
+  header.container div > button {
+    cursor: pointer;
+  }
+  header.container div > button.bg-secondary:hover {
+    background-color: #f1d092;
   }
 }
 
