@@ -3,10 +3,6 @@
   ##Screen = start screen 0px - 480px this code will execute
 */
 @media (max-width: 480px) {
-  header.container {
-    padding: 12px 4px 12px 4px;
-    margin: 0 auto;
-  }
   header.container nav.open ul {
     display: flex;
     position: absolute;
@@ -38,17 +34,6 @@
   section figure > img {
     order: 1;
   }
-
-  /*   
-  main figure > img {
-    width: 100%;
-    height: auto;
-  }
-
-  section.container div > .text-5xl {
-    font-size: 8px;
-    line-height: 2.25rem;
-  } */
 }
 
 /*
@@ -56,10 +41,6 @@
   ##Screen = B/w 481px to 767px
 */
 @media (min-width: 481px) and (max-width: 767px) {
-  header.container {
-    padding: 12px 4px 12px 4px;
-    margin: auto;
-  }
   header.container nav.open ul {
     display: flex;
     position: absolute;
@@ -75,74 +56,11 @@
     display: none;
   }
 
-  header.container ul.gap-8 {
+  /* header.container ul.gap-8 {
     gap: 1.5rem;
-  }
+  } */
 
   header.container #toggle-menu {
     padding: 8px;
-  }
-
-  section.container div > h1.text-5xl {
-    font-size: 30px;
-    line-height: 2.25rem;
   }
 }
-
-/* max-width 450px, mobile-only styles */
-/* @media only screen and (max-width: 28.125em) {
-  main section.container {
-    display: flex;
-    flex-direction: column;
-  }
-  main section > div {
-    order: 2;
-  }
-  section figure > img {
-    order: 1;
-  }
-  main figure > img {
-    width: 100%;
-    height: auto;
-  }
-
-  header.container nav > ul {
-    display: none;
-  }
-
-  section.container div > .text-5xl {
-    font-size: 8px;
-    line-height: 2.25rem;
-  }
-} */
-
-/* min-width: 450px max-width 660px, mobile-only portrait and landscape styles */
-/* @media only screen and (min-width: 28.125em) and (max-width: 41.25em) {
-  header.container {
-    padding: 4px;
-    margin: auto;
-  }
-  header.container nav.open ul {
-    display: flex;
-    position: absolute;
-    top: 3.625rem;
-    right: 0;
-    gap: 1rem;
-    padding: 14px;
-    left: 0;
-    flex-direction: column;
-    background-color: var(--secondary-light);
-  }
-  header.container nav > ul {
-    display: none;
-  }
-
-  header.container #toggle-menu {
-    padding: 8px;
-  }
-
-  section.container div > h1.text-5xl {
-    font-size: 30px;
-    line-height: 2.25rem;
-  }
-} */

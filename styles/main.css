@@ -38,6 +38,11 @@ a {
   list-style-type: none;
 }
 
+header.container {
+  padding: 12px 4px 12px 4px;
+  margin: auto;
+}
+
 header.container nav ul > li:hover {
   font-weight: 500;
   color: #003459;
