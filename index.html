@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-    <title>CarePet</title>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#ffffff" />
+      <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+      <title>CarePet</title>
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="styles/main.css" />
+      <link
+         rel="stylesheet"
+         href="styles/mobile.css"
+         media="screen and (max-width: 600px)" />
+      <link
+         rel="stylesheet"
+         href="styles/medium.css"
+         media="screen and (min-width: 660px) and (max-width: 1024px)" />
+      <link
+         rel="stylesheet"
+         href="styles/large.css"
+         media="screen and (min-width: 1024px)" />
 
-    <!-- cdn font awesome 6.5.1 -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header class="container mx-auto flex justify-between items-center">
-      <figure>
-        <img src="/assets/Logo.png" alt="CarePet" draggable="false" />
-      </figure>
-      <nav>
-        <ul class="flex gap-8">
-          <li><a href="#" class="text-primary font-medium text-lg">Home</a></li>
-          <li><a href="#" class="text-primary">Category</a></li>
-          <li><a href="#" class="text-primary">Shop</a></li>
-          <li><a href="#" class="text-primary">Blog</a></li>
-          <li><a href="#" class="text-primary">About us</a></li>
-        </ul>
-      </nav>
-      <div class="flex items-center gap-4">
-        <button class="btn btn-sm bg-secondary rounded-full">Sign up</button>
-        <div class="fa-solid fa-bars icon" id="toggle-menu"></div>
-      </div>
-    </header>
+      <!-- google font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+         rel="stylesheet" />
 
-    <main>
-      <section class="container flex justify-between items-center">
-        <div class="flex flex-col gap-4">
-          <h1 class="text-primary text-5xl font-medium capitalize">
-            Our family extends a warm welcome to your cherished pet.
-          </h1>
-          <p class="text-primary-400">
-            Helping you raise a clean, healthy, and well-behaved pet. We also
-            offer convenient pet boarding services.
-          </p>
-          <div class="flex items-center gap-4">
-            <button class="btn btn-md bg-pink-red rounded-full text-neutral-00">
-              Contact us
+      <!-- cdn font awesome 6.5.1 -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   </head>
+
+   <body>
+      <header
+         class="container mx-auto flex justify-between items-center margin-top">
+         <figure>
+            <img src="/assets/Logo.png" alt="CarePet" draggable="false" />
+         </figure>
+         <nav>
+            <ul class="flex gap-8">
+               <li>
+                  <a href="#" class="text-primary font-medium">Home</a>
+               </li>
+               <li><a href="#" class="text-primary">Category</a></li>
+               <li><a href="#" class="text-primary">Shop</a></li>
+               <li><a href="#" class="text-primary">Blog</a></li>
+               <li><a href="#" class="text-primary">About us</a></li>
+            </ul>
+         </nav>
+         <div class="flex items-center gap-4">
+            <button class="btn btn-sm bg-secondary rounded-full">
+               Sign up
             </button>
-            <div class="fa-solid fa-play text-lg"></div>
-          </div>
-        </div>
-        <figure>
-          <img
-            src="./assets/image/hero-image.png"
-            alt="medical-checkup"
-            draggable="false"
-          />
-        </figure>
-      </section>
-    </main>
+            <div class="fa-solid fa-bars" id="toggle-menu"></div>
+         </div>
+      </header>
 
-    <!-- <footer>
+      <!-- <main>
+         <section class="container mx-auto flex justify-between items-center">
+            <div class="flex flex-col gap-4">
+               <h1 class="text-primary text-5xl font-medium capitalize">
+                  Our family extends a warm welcome to your cherished pet.
+               </h1>
+               <p class="text-primary-400">
+                  Helping you raise a clean, healthy, and well-behaved pet. We
+                  also offer convenient pet boarding services.
+               </p>
+               <div class="flex items-center gap-4">
+                  <button
+                     class="btn btn-md bg-pink-red rounded-full text-neutral-00">
+                     Contact us
+                  </button>
+                  <div class="fa-solid fa-play text-lg"></div>
+               </div>
+            </div>
+            <figure>
+               <img
+                  src="./assets/image/hero-image.png"
+                  alt="medical-checkup"
+                  draggable="false" />
+            </figure>
+         </section>
+      </main> -->
+
+      <!-- <footer>
       <h1>footer</h1>
     </footer> -->
 
-    <script src="./main.js"></script>
-  </body>
+      <script src="./main.js"></script>
+   </body>
 </html>

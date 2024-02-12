@@ -1,0 +1,28 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  header.container #toggle-menu {
+    display: none;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  header.container #toggle-menu {
+    display: none;
+  }
+}
+
+/* for large screen more than 1024px*/
+/* @media only screen and (min-width: 64em) {
+  header.container #toggle-menu {
+    display: none;
+  }
+} */
