@@ -1,17 +1,21 @@
 /*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = start screen 0px - 480px this code will execute
+  ##Device = Low Resolution Tablets, Mobiles (Portrait/Landscape)
+  ##Screen = B/w 481px to 767px
 */
-@media (max-width: 480px) {
+@media screen and (max-width: 48rem) {
+  header.container {
+    position: sticky;
+    top: 0;
+    background-color: var(--secondary-light);
+  }
   header.container nav.open ul {
     display: flex;
-    position: absolute;
-    top: 3.625rem;
-    right: 0;
-    gap: 1rem;
-    padding: 14px;
-    left: 0;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
     background-color: var(--secondary-light);
   }
   header.container nav > ul {
@@ -21,46 +25,27 @@
     display: none;
   }
   header.container #toggle-menu {
-    padding: 8px;
+    padding: 0px;
   }
 
-  main section.container {
+  section.container {
     display: flex;
     flex-direction: column;
   }
-  main section > div {
+  section > div {
     order: 2;
   }
   section figure > img {
+    max-width: 80%;
     order: 1;
   }
-}
 
-/*
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-@media (min-width: 481px) and (max-width: 767px) {
-  header.container nav.open ul {
-    display: flex;
-    position: absolute;
-    top: 3.625rem;
-    right: 0;
-    gap: 1rem;
-    padding: 14px;
-    left: 0;
-    flex-direction: column;
-    background-color: var(--secondary-light);
-  }
-  header.container nav > ul {
-    display: none;
+  section.container > div.flex {
+    width: 100%;
   }
 
-  /* header.container ul.gap-8 {
-    gap: 1.5rem;
-  } */
-
-  header.container #toggle-menu {
-    padding: 8px;
+  section.container > div.flex h1.text-large {
+    font-size: 1.875rem; /*30px*/
+    line-height: 2.5rem;
   }
 }

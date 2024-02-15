@@ -1,12 +1,18 @@
-const hamburgerToggle = document.querySelector("#toggle-menu")
 const navigation = document.querySelector("nav")
+const hamburgerToggle = document.getElementById("toggle-menu")
 
-hamburgerToggle.addEventListener("click", onHamburgerClick);
+document.addEventListener("DOMContentLoaded", function () {
+    hamburgerToggle.addEventListener("click", onHamburgerClick);
 
-function onHamburgerClick() {
-    if (!navigation.classList.contains("open")) {
-        navigation.classList.add("open")
-    } else {
-        navigation.classList.remove("open")
+    function onHamburgerClick() {
+        if (!navigation.classList.contains("open")) {
+            navigation.classList.add("open")
+            hamburgerToggle.classList.remove("fa-bars");
+            hamburgerToggle.classList.add("fa-xmark");
+        } else {
+            navigation.classList.remove("open");
+            hamburgerToggle.classList.remove("fa-xmark");
+            hamburgerToggle.classList.add("fa-bars");
+        }
     }
-}
+})

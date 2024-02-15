@@ -9,19 +9,19 @@
       <title>CarePet</title>
 
       <!-- responsive css -->
-      <link rel="stylesheet" href="styles/main.css" />
+      <link rel="stylesheet" href="styles/global.css" />
       <link
          rel="stylesheet"
          href="styles/mobile.css"
          media="screen and (max-width: 600px)" />
-      <link
+      <!-- <link
          rel="stylesheet"
          href="styles/medium.css"
          media="screen and (min-width: 660px) and (max-width: 1024px)" />
       <link
          rel="stylesheet"
          href="styles/large.css"
-         media="screen and (min-width: 1024px)" />
+         media="screen and (min-width: 1024px)" /> -->
 
       <!-- google font -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,11 +38,11 @@
 
    <body>
       <header class="container mx-auto flex justify-between items-center">
-         <figure>
+         <a href="/" class="flex items-center">
             <img src="/assets/Logo.png" alt="CarePet" draggable="false" />
-         </figure>
+         </a>
          <nav>
-            <ul class="flex gap-8">
+            <ul class="flex gap-8 items-center justify-center">
                <li>
                   <a href="#" class="text-primary">Home</a>
                </li>
@@ -56,30 +56,40 @@
             <button class="btn btn-sm bg-secondary rounded-full">
                Sign up
             </button>
-            <div class="fa-solid fa-bars text-primary" id="toggle-menu"></div>
+            <div
+               class="fa-solid fa-bars fa-lg text-primary"
+               style="z-index: 999"
+               id="toggle-menu"
+               onclick="toggleMenu()"></div>
          </div>
       </header>
+
       <main>
          <section class="container mx-auto flex justify-between items-center">
             <div class="flex flex-col gap-4">
-               <h1 class="text-primary text-5xl font-medium capitalize">
-                  Our family extends a warm welcome to your cherished pet.
-               </h1>
-               <p class="text-primary-400">
-                  Helping you raise a clean, healthy, and well-behaved pet. We
-                  also offer convenient pet boarding services.
-               </p>
+               <header>
+                  <h1 class="text-primary font-medium text-large capitalize">
+                     Pet as Family
+                  </h1>
+                  <p class="text-primary-400">
+                     Helping you raise a clean, healthy, and well-behaved pet.
+                     We also offer convenient pet boarding services.
+                  </p>
+               </header>
                <div class="flex items-center gap-4">
                   <button
                      class="btn btn-md bg-pink-red rounded-full text-neutral-00">
                      Contact us
                   </button>
-                  <div class="fa-solid fa-play text-lg"></div>
+                  <div
+                     class="btn btn-md flex justify-center items-center rounded-full text-pink-red">
+                     <i class="fa-solid fa-play fa-lg"></i>
+                  </div>
                </div>
             </div>
             <figure>
                <img
-                  src="./assets/image/hero-image.png"
+                  src="./assets/image/hero-image1.png"
                   alt="medical-checkup"
                   draggable="false" />
             </figure>
