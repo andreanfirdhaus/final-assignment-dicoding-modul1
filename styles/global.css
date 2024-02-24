@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 :root {
   --primary: #003459;
   --primary--400: #335d7a;
@@ -18,7 +19,7 @@
   --orange: #ff912c;
   --green: #34c759;
   --pink-red: #ff564f;
-  --base-font: 1rem;
+  --base-font: 0.875rem; /* 14px */
   --base-line-height: 1.5rem;
 }
 *,
@@ -43,8 +44,8 @@ body {
   line-height: var(--base-line-height);
   background-color: var(--secondary-light);
   font-family: "Poppins", sans-serif;
-  margin-left: 8px;
-  margin-right: 8px;
+  font-weight: 400;
+  font-style: normal;
 }
 a,
 button {
@@ -61,48 +62,163 @@ img {
   height: auto;
   object-fit: cover;
 }
-header.container {
-  padding-top: 8px;
-  padding-bottom: 8px;
+main {
+  margin: 0 14px;
 }
-header.container nav ul > li:hover {
+
+/* navbar */
+header.container-fluid {
+  background-color: var(--secondary-light);
+  position: sticky;
+  top: 0px;
+  box-shadow: 0 2px 10px -2px rgba(36, 43, 51, 0.1);
+}
+
+#nav_menu,
+#nav_action {
+  padding: 12px;
+}
+#nav_menu a > img {
+  margin-right: 40px;
+}
+div#nav_menu ul > li {
+  padding: 0px 18px;
+}
+div#nav_action li > div.text-primary {
+  display: inline-block;
+  margin: 0 20px;
+}
+div#nav_menu ul > li:hover {
   font-weight: 500;
   color: var(--primary);
 }
-header.container div > button:hover {
+div#nav_action li > button.bg-primary:hover {
   background-color: var(--secondary-medium);
+  color: var(--primary);
 }
 
-section.container {
+#toggle-menu {
+  display: none;
+}
+
+aside#sidebar_menu {
+  display: none;
+}
+
+section.container,
+div.container {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-/* main section.container > div.flex {
-  width: 50%;
+/* section.container header > h1,
+h2 {
+  margin-bottom: 10px;
 }
-
-main section.container div > div.btn-md {
+section.container div.btn-md {
   padding: 19px 12px;
   border: 2px solid var(--pink-red);
 }
-main section.container div.btn > i {
+section.container div > div.btn-md:hover {
+  background-color: var(--pink-red);
+  color: var(--neutral-00);
+  cursor: pointer;
+}
+section.container div.btn > i {
   margin-top: 1.4px;
   margin-left: 1.9px;
 }
-section.container > figure img {
-  width: 100%;
+
+section.container-fluid div.flex > ul li {
+  display: flex;
+  flex: 50%;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 10px;
+}
+
+section.container div.flex i.fa-arrow-left,
+i.fa-arrow-right {
+  background-color: var(--primary);
+  color: var(--neutral-00);
+  font-size: 1.5em;
+  padding: 9px 11px;
+  border-radius: 100px;
+  cursor: pointer;
 } */
+
+/* carousel */
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 1.2rem;
+  overflow: hidden;
+}
+.carousel .card {
+  min-height: 440px;
+}
+.card .img-container {
+  max-width: 406px;
+  height: auto;
+  object-fit: cover;
+}
+.card .img-container img {
+  border-radius: 14px;
+}
+
+.carousel .card .card-desc {
+  max-width: 95%;
+  padding: 20px 0 20px 0;
+}
+div.card-desc a:hover {
+  color: var(--primary--400);
+}
+.card-desc > p {
+  margin-top: 6px;
+}
+/* carousel */
+
+#bottom-hero {
+  min-height: 563px;
+}
+/*icon*/
+.check-mark {
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  background-image: url(../assets/image/icon.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
 .container {
   max-width: 1280px;
-  padding: 4px;
-  padding: 0 8px 0 8px;
-}
-.mx-auto {
   margin: auto;
 }
+.container-fluid {
+  width: 100%;
+}
 
+.container-fluid-rename-sek {
+  background-image: linear-gradient(
+      to right,
+      rgb(252, 238, 213, 0.972) 100% 100%
+    ),
+    url(../assets/image/background-section.jpg);
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  z-index: -999;
+}
+.container-fluid-rename-sek::before {
+  content: "";
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+}
 .bg-primary {
   background-color: var(--primary);
 }
@@ -129,17 +245,37 @@ section.container > figure img {
   color: var(--pink-red);
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .flex {
   display: flex;
 }
+.flex-basis {
+  flex: 50%;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .flex-col {
   flex-direction: column;
+  flex: 50%;
+}
+.flex-row {
+  flex-direction: row;
+  flex: 50%;
 }
 .justify-between {
   justify-content: space-between;
 }
 .justify-center {
   justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
 }
 .items-center {
   align-items: center;
@@ -148,9 +284,16 @@ section.container > figure img {
 .rounded-full {
   border-radius: 100px;
 }
+.rounded-medium {
+  border-radius: 10px;
+}
+.text-medium {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 
 .text-large {
-  font-size: 3.25rem;
+  font-size: 2.75rem;
   line-height: 1.2;
 }
 
@@ -158,8 +301,18 @@ section.container > figure img {
   text-transform: capitalize;
 }
 
+.font-normal {
+  font-weight: 400;
+}
 .font-medium {
   font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .btn {
@@ -167,10 +320,10 @@ section.container > figure img {
   border-style: none;
 }
 .btn.btn-sm {
-  padding: 8px 16px 8px 16px;
+  padding: 11.25px 24px;
 }
 .btn.btn-md {
-  padding: 14px 32px 14px 32px;
+  padding: 13px 26px 13px 26px;
 }
 
 .relative {
@@ -189,3 +342,72 @@ section.container > figure img {
 .gap-8 {
   gap: 2rem;
 }
+.gap-12 {
+  gap: 3rem;
+}
+
+/* kode flexbox layout our services */
+.content {
+  flex: 1 100%;
+  padding: 20px; /* Assuming $gutter is 20px */
+  border-radius: 16px;
+}
+
+#content-a {
+  background-image: url(../assets/image/pet-boarding.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content-b {
+  background-image: url(../assets/image/pet-grooming.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content-c {
+  background-image: url(../assets/image/pet-healthcare.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content-d {
+  background-image: url(../assets/image/pet-training.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  flex-flow: row wrap;
+}
+
+.col {
+  flex-flow: column wrap;
+}
+
+.structure {
+  min-height: 604px;
+}
+
+.structure-1 {
+  flex: 1 65%;
+}
+.structure-2 {
+  flex: 1 35%;
+}
+
+.c {
+  flex: 1 80%;
+  padding: 0 8px 8px 0;
+}
+.a {
+  flex: 1 50%;
+  padding: 8px 8px 8px 0;
+}
+.b {
+  flex: 1 50%;
+  padding: 8px;
+}
+.e {
+  flex: 1 50%;
+  padding: 8px 0 8px 8px;
+}
+
+/* kode flexbox layout our services */

@@ -1,18 +1,27 @@
-const navigation = document.querySelector("nav")
-const hamburgerToggle = document.getElementById("toggle-menu")
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar_menu");
+    const layer = document.getElementById("layer_overlay")
+    const screenWidth = window.innerWidth;
 
-document.addEventListener("DOMContentLoaded", function () {
-    hamburgerToggle.addEventListener("click", onHamburgerClick);
-
-    function onHamburgerClick() {
-        if (!navigation.classList.contains("open")) {
-            navigation.classList.add("open")
-            hamburgerToggle.classList.remove("fa-bars");
-            hamburgerToggle.classList.add("fa-xmark");
-        } else {
-            navigation.classList.remove("open");
-            hamburgerToggle.classList.remove("fa-xmark");
-            hamburgerToggle.classList.add("fa-bars");
-        }
+    if (screenWidth <= 768 && !sidebar.classList.contains("active")) {
+        sidebar.classList.toggle("active");
+        layer.classList.add("layer_overlay")
+    } else {
+        sidebar.classList.remove("active");
+        layer.classList.remove("layer_overlay")
     }
-})
+};
+
+const dropdown = document.querySelectorAll(".dropdown");
+dropdown.forEach(dropdown => {
+    dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("dropdown-active");
+        const dropdownBody = dropdown.querySelector(".dropdown-body");
+
+        // cek "dropdown-active" class in dropdown element
+        const isActive = dropdown.classList.contains("dropdown-active");
+
+        // Set height maksimum (max-height) sesuai kondisi dropdown aktif atau tidak
+        dropdownBody.style.maxHeight = isActive ? dropdownBody.scrollHeight + "px" : "0";
+    });
+});

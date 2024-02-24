@@ -1,0 +1,291 @@
+/*  
+  ##Device= Mobile screen   
+*/
+@media screen and (max-width: 480px) {
+  /* navbar */
+  #nav_action li > i {
+    display: none;
+  }
+  div#nav_action li > div.text-primary {
+    display: none;
+  }
+
+  aside#sidebar_menu {
+    /* background-color: var(--secondary-light) !important; */
+    width: 70% !important;
+    right: -70% !important;
+  }
+  aside#sidebar_menu.active {
+    right: 0 !important;
+  }
+
+  /* top-hero section */
+  section#top-hero > div {
+    order: 2;
+  }
+  section#top-hero > figure {
+    margin: 0 24px;
+    order: 1;
+  }
+  .gap-12 {
+    gap: 0;
+  }
+
+  section.container,
+  div.container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 0 31%;
+  }
+  /* .content {
+    padding: 25px;
+  }
+  .structure-1,
+  .structure-2,
+  .e {
+    flex: 1 100%;
+    min-height: auto;
+  }
+  .structure-1 > .flex {
+    flex: 1 100%;
+    padding: 8px 0;
+    min-height: 225px;
+  }
+  .structure-2 > .flex {
+    flex: 1 100%;
+    padding: 8px 0;
+    min-height: 225px;
+  }
+
+  section.container-fluid div.flex > ul li {
+    flex: 100%;
+    margin-bottom: 12px;
+  }
+
+  section.container .carousel {
+    grid-auto-columns: 100%;
+  }
+
+  section.container div.flex i.fa-arrow-left,
+  i.fa-arrow-right {
+    font-size: 1em;
+    padding: 10px 11px;
+    border-radius: 100px;
+  } */
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Portrait/Landscape)
+*/
+@media screen and (max-width: 768px) {
+  .layer_overlay {
+    background-color: rgba(36, 43, 51, 0.5);
+    filter: blur(3px);
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* navbar */
+  #toggle-menu {
+    display: block;
+  }
+  div#nav_menu > ul {
+    display: none;
+  }
+  div#nav_action li > button {
+    display: none;
+  }
+  div#nav_action #toggle-menu {
+    padding: 18px 8px 16px;
+    border-radius: 4px;
+    background-color: var(--primary);
+    color: var(--neutral-00);
+    position: relative;
+    z-index: 9001;
+  }
+
+  aside#sidebar_menu {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    display: block;
+    background-color: var(--secondary-light);
+    padding: 72px 26px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    transition: right;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+    box-shadow: -2px 0 10px -2px rgba(36, 43, 51, 0.1);
+    z-index: 9000;
+  }
+  aside#sidebar_menu.active {
+    right: 0;
+  }
+
+  /* terkahir sampai 2 selector dibawah ini. untuk menampilkan img dan icon dipaling atas dengan rata kanan dan kiri */
+  aside#sidebar_menu #toggle-menu {
+    background-color: var(--primary);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 18px 9px 16px;
+    border-radius: 4px;
+    margin: 14px 12px;
+    color: var(--neutral-00);
+  }
+
+  aside#sidebar_menu > .sidebar_body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    /* background-color: yellow; */
+    /* gap: 32px; */
+  }
+  aside#sidebar_menu > .sidebar_body ul li {
+    padding: 10px 0;
+  }
+  aside#sidebar_menu > .sidebar_body ul > li > ul {
+    color: var(--primary);
+    padding: 0 24px;
+  }
+
+  aside#sidebar_menu > .sidebar_body ul > li > a {
+    /* kode ini adalah kode terakhir yang kerjakan sebelum turu*/
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* start dropdown */
+  aside#sidebar_menu > .sidebar_body > ul > li > .dropdown {
+    cursor: auto;
+  }
+  aside#sidebar_menu
+    > .sidebar_body
+    > ul
+    > li
+    > .dropdown
+    > .dropdown-header
+    > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  aside#sidebar_menu > .sidebar_body > ul > li > .dropdown .dropdown-body {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    padding: 0 28px;
+  }
+  .dropdown-body > .dropdown-active {
+    max-height: initial;
+  }
+  /* end dropdown */
+
+  aside#sidebar_menu > .sidebar_body ul > li.active {
+    /* when link are visit*/
+    font-weight: 600;
+  }
+  aside#sidebar_menu > .sidebar_footer {
+    width: 100%;
+    margin-top: auto;
+  }
+  aside#sidebar_menu > .sidebar_footer ul > li {
+    margin-top: 16px;
+  }
+  aside#sidebar_menu > .sidebar_footer li > button {
+    width: 100%;
+  }
+
+  main {
+    position: relative;
+    z-index: -9999;
+  }
+
+  /* header.container #toggle-menu {
+    padding: 0px;
+  } */
+
+  section.container header {
+    width: 100%;
+  }
+  /* section > div {
+    order: 2;
+  } */
+
+  /* section figure > img { */
+  /* background-color: red; */
+  /* margin: auto; */
+  /* order: 1; */
+  /* } */
+
+  section.container > div.flex {
+    width: 100%;
+  }
+
+  section.container header > h1,
+  h2.text-large {
+    font-size: 1.875rem; /*30px*/
+    line-height: 2.5rem; /*40px*/
+    margin: 16px 0 5px;
+  }
+
+  section.container figure > figcaption.text-medium {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  section.container .carousel {
+    grid-auto-columns: calc((100% / 2) - 12px);
+  }
+
+  .gap-12 {
+    gap: 10;
+  }
+  .btn.btn-md {
+    padding: 12px 20px 12px 20px;
+  }
+
+  .structure-1,
+  .structure-2,
+  .e {
+    flex: 1 100%;
+    /* min-height: 480px; */
+  }
+  .a {
+    padding: 8px 8px 8px 0;
+  }
+  .b {
+    padding: 8px 0 8px 8px;
+  }
+  .c {
+    padding: 0 0 8px 0;
+  }
+  .e {
+    padding: 8px 0 8px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* navbar */
+  #nav_menu a > img {
+    margin-right: 20px;
+  }
+  div#nav_menu ul > li {
+    padding: 0px 9px;
+  }
+  div#nav_action li > div.text-primary {
+    display: inline-block;
+    margin: 0 15px;
+  }
+}

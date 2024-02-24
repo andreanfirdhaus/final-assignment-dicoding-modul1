@@ -3,32 +3,14 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="msapplication-TileColor" content="#da532c" />
-      <meta name="theme-color" content="#ffffff" />
       <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
       <title>CarePet</title>
+      <meta
+         name="description"
+         content="If you're looking for loving and convenient pet care, look no further than CarePet! We provide everything from pet sitting to transportation." />
 
-      <!-- responsive css -->
       <link rel="stylesheet" href="styles/global.css" />
-      <link
-         rel="stylesheet"
-         href="styles/mobile.css"
-         media="screen and (max-width: 600px)" />
-      <!-- <link
-         rel="stylesheet"
-         href="styles/medium.css"
-         media="screen and (min-width: 660px) and (max-width: 1024px)" />
-      <link
-         rel="stylesheet"
-         href="styles/large.css"
-         media="screen and (min-width: 1024px)" /> -->
-
-      <!-- google font -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-         rel="stylesheet" />
+      <link rel="stylesheet" href="styles/responsive.css" />
 
       <!-- cdn font awesome 6.5.1 -->
       <link
@@ -37,38 +19,167 @@
    </head>
 
    <body>
-      <header class="container mx-auto flex justify-between items-center">
-         <a href="/" class="flex items-center">
-            <img src="/assets/Logo.png" alt="CarePet" draggable="false" />
-         </a>
-         <nav>
-            <ul class="flex gap-8 items-center justify-center">
-               <li>
-                  <a href="#" class="text-primary">Home</a>
-               </li>
-               <li><a href="#" class="text-primary">Category</a></li>
-               <li><a href="#" class="text-primary">Shop</a></li>
-               <li><a href="#" class="text-primary">Blog</a></li>
-               <li><a href="#" class="text-primary">About us</a></li>
-            </ul>
+      <header class="container-fluid">
+         <nav class="container flex justify-between items-center">
+            <!-- nav menu -->
+            <div id="nav_menu" class="flex">
+               <a href="#">
+                  <img src="/assets/Logo.png" alt="CarePet" draggable="false" />
+               </a>
+               <ul class="flex items-center">
+                  <li><a href="#" class="text-primary">Category</a></li>
+                  <li><a href="#" class="text-primary">Shop</a></li>
+                  <li><a href="#" class="text-primary">Articles</a></li>
+                  <li><a href="#" class="text-primary">Gallery</a></li>
+                  <li><a href="#" class="text-primary">About us</a></li>
+               </ul>
+            </div>
+
+            <!-- nav action -->
+            <div id="nav_action">
+               <ul class="flex items-center">
+                  <li>
+                     <div class="text-primary">
+                        <i
+                           class="fa-solid fa-phone"
+                           style="font-size: 16px"></i>
+                        <span>+62 812 3078 674</span>
+                     </div>
+                  </li>
+                  <li>
+                     <button
+                        class="btn btn-sm bg-primary rounded-medium text-neutral-00">
+                        Log in
+                     </button>
+                  </li>
+
+                  <!-- toggle-menu -->
+                  <li>
+                     <div onclick="toggleSidebar()">
+                        <i class="fa-solid fa-bars fa-lg" id="toggle-menu"></i>
+                     </div>
+                  </li>
+               </ul>
+            </div>
          </nav>
-         <div class="flex items-center gap-4">
-            <button class="btn btn-sm bg-secondary rounded-full">
-               Sign up
-            </button>
-            <div
-               class="fa-solid fa-bars fa-lg text-primary"
-               style="z-index: 999"
-               id="toggle-menu"
-               onclick="toggleMenu()"></div>
-         </div>
       </header>
+      <div id="layer_overlay"></div>
+
+      <!-- mobile version sidebar -->
+      <aside id="sidebar_menu" class="container">
+         <div class="sidebar_header">
+            <div onclick="toggleSidebar()">
+               <i class="fa-solid fa-xmark fa-lg" id="toggle-menu"></i>
+            </div>
+         </div>
+
+         <div class="sidebar_body">
+            <ul>
+               <li class="active">
+                  <a href="#" class="text-primary">
+                     <i class="fa-solid fa-house-chimney fa-lg"></i>
+                     <span>Home</span>
+                  </a>
+               </li>
+               <li>
+                  <div class="dropdown">
+                     <div
+                        class="dropdown-header flex justify-between items-center text-primary">
+                        <div>
+                           <i class="fa-solid fa-paw fa-lg"></i>
+                           <span>Category</span>
+                        </div>
+                        <i class="fa-solid fa-caret-down fa-lg"></i>
+                     </div>
+
+                     <ul class="dropdown-body">
+                        <li>
+                           <a href="#" class="text-primary">Grooming</a>
+                        </li>
+                        <li>
+                           <a href="#" class="text-primary">Boarding</a>
+                        </li>
+                        <li>
+                           <a href="#" class="text-primary">Healthcare</a>
+                        </li>
+                        <li>
+                           <a href="#" class="text-primary">Training</a>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li>
+                  <a href="#" class="text-primary">
+                     <i class="fa-solid fa-store fa-lg"></i>
+                     <span>Shop</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-primary">
+                     <i class="fa-solid fa-newspaper fa-lg"></i>
+                     <span>Articles</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-primary">
+                     <i class="fa-solid fa-images fa-lg"></i>
+                     <span>Gallery</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="text-primary">
+                     <i class="fa-solid fa-circle-info fa-lg"></i>
+                     <span>About us</span>
+                  </a>
+               </li>
+            </ul>
+
+            <!-- <ul>
+               <li>
+                  <div class="text-primary">
+                     <i class="fa-solid fa-phone fa-lg"></i>
+                     <span>+62 812 3078 674</span>
+                  </div>
+               </li>
+               <li>
+                  <div class="text-primary">
+                     <i class="fa-solid fa-envelope fa-lg"></i>
+                     <span>carepetID@mail.com</span>
+                  </div>
+               </li>
+               <li>
+                  <div class="text-primary">
+                     <i class="fa-solid fa-circle-question fa-lg"></i>
+                     <span>faq</span>
+                  </div>
+               </li>
+            </ul> -->
+         </div>
+
+         <div class="sidebar_footer">
+            <ul>
+               <li>
+                  <button
+                     class="btn btn-sm bg-primary rounded-medium text-neutral-00">
+                     Log in
+                  </button>
+               </li>
+               <li>
+                  <button
+                     class="btn btn-sm bg-secondary rounded-medium text-primary">
+                     Create an account
+                  </button>
+               </li>
+            </ul>
+         </div>
+      </aside>
 
       <main>
-         <section class="container mx-auto flex justify-between items-center">
+         <section id="top-hero" class="container flex items-center gap-12">
             <div class="flex flex-col gap-4">
                <header>
-                  <h1 class="text-primary font-medium text-large capitalize">
+                  <h1
+                     class="text-primary font-semibold text-large capitalize mb-md">
                      Pet as Family
                   </h1>
                   <p class="text-primary-400">
@@ -77,10 +188,12 @@
                   </p>
                </header>
                <div class="flex items-center gap-4">
-                  <button
-                     class="btn btn-md bg-pink-red rounded-full text-neutral-00">
-                     Contact us
-                  </button>
+                  <a href="#about-us">
+                     <button
+                        class="btn btn-md bg-pink-red rounded-full text-neutral-00">
+                        Our service
+                     </button>
+                  </a>
                   <div
                      class="btn btn-md flex justify-center items-center rounded-full text-pink-red">
                      <i class="fa-solid fa-play fa-lg"></i>
@@ -89,12 +202,248 @@
             </div>
             <figure>
                <img
-                  src="./assets/image/hero-image1.png"
+                  src="./assets/image/hero.png"
                   alt="medical-checkup"
                   draggable="false" />
             </figure>
          </section>
+
+         <section class="container flex">
+            <div class="card">
+               <header>
+                  <h2>Your pet, we care</h2>
+               </header>
+               <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem ...
+               </p>
+            </div>
+
+            <div class="card">
+               <header class="flex items-center">
+                  <img
+                     src="../assets/image/heart-icon.png"
+                     alt="icon"
+                     draggable="false" />
+                  <h3>Handled Wholeheartedly</h3>
+               </header>
+               <p>
+                  We take care of all your pets, regardless of their kind,
+                  equally and with full of love
+               </p>
+            </div>
+
+            <div class="card">
+               <header class="flex items-center">
+                  <img
+                     src="../assets/image/paw-icon.png"
+                     alt="icon"
+                     draggable="false" />
+                  <h3>Managed by Professionals</h3>
+               </header>
+               <p>
+                  We have verified professional staff and veterinarians to care
+                  for all your pets.
+               </p>
+            </div>
+         </section>
+
+         <!-- <section
+            id="about-us"
+            class="container flex flex-row items-center gap-12">
+            <figure class="flex-basis">
+               <img
+                  src="./assets/image/hero-image2.png"
+                  alt="medical-checkup"
+                  draggable="false" />
+            </figure>
+            <div class="flex flex-col flex-basis gap-4">
+               <header>
+                  <h2 class="text-primary font-medium text-large capitalize">
+                     Customer satisfaction is our priority
+                  </h2>
+                  <p class="text-primary-400">
+                     At CarePet, we genuinely love and cater to pets of all
+                     types and breeds. Our tailored pet care services prioritize
+                     individual needs, aiming to guarantee the happiness and
+                     health of each animal.
+                  </p>
+               </header>
+               <div>
+                  <button
+                     class="btn btn-md bg-pink-red rounded-full text-neutral-00">
+                     Contact us
+                  </button>
+               </div>
+            </div>
+         </section> -->
+
+         <!-- <section id="#our-service" class="container">
+            <header>
+               <h2 class="text-primary font-medium text-large capitalize">
+                  What Can We Do
+               </h2>
+            </header>
+            <div class="flex row structure">
+               <div class="flex row structure-1">
+                  <div class="flex c">
+                     <div class="content" id="content-a">
+                        <div>Pet Boarding</div>
+                     </div>
+                  </div>
+                  <div class="flex a">
+                     <div class="content" id="content-b">Pet Grooming</div>
+                  </div>
+                  <div class="flex b">
+                     <div class="content" id="content-c">Pet Healthcare</div>
+                  </div>
+               </div>
+               <div class="flex row structure-2">
+                  <div class="flex e">
+                     <div class="content" id="content-d">Pet Training</div>
+                  </div>
+               </div>
+            </div>
+         </section> -->
+
+         <!-- <section id="#why-us" class="container-fluid">
+            <div class="container flex items-center gap-12">
+               <figure class="flex-basis">
+                  <img
+                     src="./assets/image/hero-image3.png"
+                     alt="medical-checkup"
+                     draggable="false" />
+               </figure>
+               <div class="flex flex-col flex-basis gap-8">
+                  <header>
+                     <h2 class="text-primary font-medium text-large capitalize">
+                        Our pet agency is the best in the business
+                     </h2>
+                     <p class="text-primary-400">
+                        Dedicated to pets, our experienced and friendly team is
+                        committed to delivering outstanding care, quality
+                        products, and personalized services, covering everything
+                        from nutrition advice to grooming.
+                     </p>
+                  </header>
+                  <ul class="flex flex-wrap">
+                     <li>
+                        <i class="check-mark"></i>
+                        <p class="text-primary-400">Certified Groomer</p>
+                     </li>
+                     <li>
+                        <i class="check-mark"></i>
+                        <p class="text-primary-400">Animal Lover</p>
+                     </li>
+                     <li>
+                        <i class="check-mark"></i>
+                        <p class="text-primary-400">7+ Years Experience</p>
+                     </li>
+                     <li>
+                        <i class="check-mark"></i>
+                        <p class="text-primary-400">Pet Parent Of 3 Dogs</p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section> -->
+
+         <!-- <section id="blog" class="container flex flex-col">
+            <header class="flex justify-between items-center">
+               <h2 class="text-primary font-medium text-large capitalize">
+                  Latest blog
+               </h2>
+               <div class="flex gap-4">
+                  <i class="fa-solid fa-arrow-left"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
+               </div>
+            </header>
+            <ul class="carousel">
+               <li class="card">
+                  <div class="img-container">
+                     <img src="../assets/image/blog1.jpg" alt="fuck uu" />
+                  </div>
+                  <div class="card-desc">
+                     <a href="#" class="text-primary font-medium text-medium">
+                        What You Should Know About Dog & Cat Grooming
+                     </a>
+                     <p class="text-primary-400">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been...
+                     </p>
+                  </div>
+               </li>
+               <li class="card">
+                  <div class="img-container">
+                     <img src="../assets/image/blog2.jpg" alt="fuck uu" />
+                  </div>
+                  <div class="card-desc">
+                     <a href="#" class="text-primary font-medium text-medium">
+                        Top-Rated Feline Feasts of 2024: CarePet's Picks
+                     </a>
+                     <p class="text-primary-400">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been...
+                     </p>
+                  </div>
+               </li>
+               <li class="card">
+                  <div class="img-container">
+                     <img src="../assets/image/blog3.jpg" alt="fuck uu" />
+                  </div>
+                  <div class="card-desc">
+                     <a href="#" class="text-primary font-medium text-medium">
+                        Simple health checks you can do with your pet at home
+                     </a>
+                     <p class="text-primary-400">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been...
+                     </p>
+                  </div>
+               </li>
+               <li class="card">
+                  <div class="img-container">
+                     <img src="../assets/image/blog1.jpg" alt="fuck uu" />
+                  </div>
+                  <div class="card-desc">
+                     <a href="#" class="text-primary font-medium text-medium">
+                        What You Should Know About Dog & Cat Grooming
+                     </a>
+                     <p class="text-primary-400">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been...
+                     </p>
+                  </div>
+               </li>
+            </ul>
+            <div class="flex flex-col gap-8" style="width: 35%"></div>
+         </section> -->
+
+         <!-- <section id="bottom-hero" class="container-fluid flex justify-center">
+            <div class="container flex flex-col items-center gap-12">
+               <header
+                  class="flex flex-col justify-center text-center"
+                  style="width: 75%">
+                  <h2 class="text-primary font-medium text-large capitalize">
+                     Reach out to our Customer Service for further discussion.
+                  </h2>
+                  <p class="text-primary-400">
+                     Lorem Ipsum has been the industry's standard dummy text
+                     ever since the 1500s, when an unknown printer took a galley
+                     of.
+                  </p>
+               </header>
+               <div>
+                  <button
+                     class="btn btn-md bg-pink-red rounded-full text-neutral-00">
+                     Contact us
+                  </button>
+               </div>
+            </div>
+         </section> -->
       </main>
+
+      <footer class="container"></footer>
       <script src="./main.js"></script>
    </body>
 </html>
