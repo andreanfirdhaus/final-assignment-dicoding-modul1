@@ -21,7 +21,17 @@ dropdown.forEach(dropdown => {
         // cek "dropdown-active" class in dropdown element
         const isActive = dropdown.classList.contains("dropdown-active");
 
-        // Set height maksimum (max-height) sesuai kondisi dropdown aktif atau tidak
+        // set height maksimum (max-height) sesuai kondisi dropdown aktif atau tidak
         dropdownBody.style.maxHeight = isActive ? dropdownBody.scrollHeight + "px" : "0";
     });
+});
+
+// scrolled navbar
+const header = document.querySelector('header.container-fluid');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
 });
