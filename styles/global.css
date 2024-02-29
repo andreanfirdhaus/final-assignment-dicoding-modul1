@@ -160,7 +160,7 @@ section#service > div > .card2 {
 }
 section#service > header > h2.text-large {
   font-size: 32px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 /* sponsorship */
@@ -197,17 +197,24 @@ i.fa-arrow-right {
 
 /* about-us */
 section.container-fluid-img > div.container > div.flex > ul {
+  max-width: 770px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 20px;
+}
+section.container-fluid-img > div.container > div.flex > ul > li > div {
+  display: flex;
+  align-items: center;
 }
 section.container-fluid-img > div.container > div.flex > ul > li {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex: 50%;
-  margin-bottom: 1rem;
+  flex: 40%;
 }
+
+/* our-service */
 
 /* carousel */
 .carousel {

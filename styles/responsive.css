@@ -27,7 +27,8 @@
     color: var(--pink-red);
   }
   section#top-hero > div > header > h1.text-large,
-  section#service > header > h2.text-large {
+  section#service > header > h2.text-large,
+  section#about-us header > h2.text-large {
     max-width: 95% !important;
     font-size: 24px !important;
     line-height: 1.5 !important;
@@ -38,8 +39,13 @@
   section#top-hero > div {
     order: 2;
   }
-  section#top-hero > figure {
+
+  /* Margin should only be applied to the top of the 'img' in the 'top-hero' and 'about-us' sections */
+  section#top-hero > figure,
+  section#about-us figure {
     margin: 0 24px !important;
+  }
+  section#top-hero > figure {
     order: 1;
   }
 
@@ -57,6 +63,7 @@
   /* about-us */
   section.container-fluid-img > div.container > div.flex > ul {
     flex-direction: column;
+    gap: 8px;
   }
   section.container-fluid-img > div.container > div.flex > ul > li {
     margin-bottom: 0.75rem;
@@ -80,9 +87,9 @@
     order: 1;
   } */
 
-  /* .gap-12 {
-    gap: 0;
-  } */
+  .gap-12 {
+    gap: 1.25rem;
+  }
 
   .card {
     flex: 1 0 31%;
