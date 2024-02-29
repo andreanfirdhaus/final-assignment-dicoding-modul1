@@ -215,6 +215,93 @@ section.container-fluid-img > div.container > div.flex > ul > li {
 }
 
 /* our-service */
+/* kode flexbox layout our services */
+.content {
+  flex: 1 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.main-content {
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  border-radius: 0 0 16px 16px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.main-content:hover {
+  background-color: rgba(0, 52, 89, 0.7);
+}
+.main-content > h3,
+.main-content > p {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.content:hover .main-content > h3,
+.content:hover .main-content > p {
+  opacity: 1;
+}
+#content-a {
+  background-image: url(../assets/image/pet-boarding.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content-b {
+  background-image: url(../assets/image/pet-grooming.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content-c {
+  background-image: url(../assets/image/pet-healthcare.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content-d {
+  background-image: url(../assets/image/pet-training.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  flex-flow: row wrap;
+}
+.col {
+  flex-flow: column wrap;
+}
+
+.structure {
+  min-height: 604px;
+}
+.structure-1 {
+  flex: 1 65%;
+}
+.structure-2 {
+  flex: 1 35%;
+}
+
+.c {
+  flex: 1 80%;
+  padding: 8px 8px 8px 0;
+}
+.a {
+  flex: 1 50%;
+  padding: 8px 8px 8px 0;
+}
+.b {
+  flex: 1 50%;
+  padding: 8px;
+}
+.e {
+  flex: 1 50%;
+  padding: 8px 0 8px 8px;
+}
+
+/* kode flexbox layout our services */
 
 /* carousel */
 .carousel {
@@ -432,69 +519,3 @@ div.card-desc a:hover {
 .gap-12 {
   gap: 3rem;
 }
-
-/* kode flexbox layout our services */
-.content {
-  flex: 1 100%;
-  padding: 20px; /* Assuming $gutter is 20px */
-  border-radius: 16px;
-}
-
-#content-a {
-  background-image: url(../assets/image/pet-boarding.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#content-b {
-  background-image: url(../assets/image/pet-grooming.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#content-c {
-  background-image: url(../assets/image/pet-healthcare.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#content-d {
-  background-image: url(../assets/image/pet-training.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.row {
-  flex-flow: row wrap;
-}
-
-.col {
-  flex-flow: column wrap;
-}
-
-.structure {
-  min-height: 604px;
-}
-
-.structure-1 {
-  flex: 1 65%;
-}
-.structure-2 {
-  flex: 1 35%;
-}
-
-.c {
-  flex: 1 80%;
-  padding: 0 8px 8px 0;
-}
-.a {
-  flex: 1 50%;
-  padding: 8px 8px 8px 0;
-}
-.b {
-  flex: 1 50%;
-  padding: 8px;
-}
-.e {
-  flex: 1 50%;
-  padding: 8px 0 8px 8px;
-}
-
-/* kode flexbox layout our services */
