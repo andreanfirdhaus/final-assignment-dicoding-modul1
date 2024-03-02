@@ -35,3 +35,33 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+
+
+// faq
+const accordionFaqHeader = document.querySelectorAll(".faq-header");
+accordionFaqHeader.forEach((accordionFaqHeader) => {
+    accordionFaqHeader.addEventListener("click", () => {
+        const currentlyActive = document.querySelector(
+            ".faq-header.active"
+        );
+        if (
+            currentlyActive &&
+            currentlyActive !== accordionFaqHeader
+        ) {
+            currentlyActive.classList.toggle("active");
+            currentlyActive.nextElementSibling.style.maxHeight = 0;
+        }
+
+        accordionFaqHeader.classList.toggle("active");
+        const accordionItemBody = accordionFaqHeader.nextElementSibling;
+        if (accordionFaqHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-minus");
+            accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-plus");
+        } else {
+            accordionItemBody.style.maxHeight = 0;
+            accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-minus");
+            accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-plus");
+        }
+    })
+})
