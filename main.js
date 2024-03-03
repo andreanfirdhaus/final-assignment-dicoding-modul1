@@ -26,7 +26,7 @@ dropdown.forEach(dropdown => {
     });
 });
 
-// scrolled navbar
+// scrolled
 const header = document.querySelector('header.container-fluid');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
@@ -36,10 +36,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
 // faq
 const accordionFaqHeader = document.querySelectorAll(".faq-header");
-accordionFaqHeader.forEach((accordionFaqHeader) => {
+accordionFaqHeader.forEach((accordionFaqHeader, index) => {
     accordionFaqHeader.addEventListener("click", () => {
         const currentlyActive = document.querySelector(
             ".faq-header.active"
@@ -64,4 +63,13 @@ accordionFaqHeader.forEach((accordionFaqHeader) => {
         accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-minus");
         accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-plus");
     })
+
+    // Set the second accordion as active by default
+    if (index === 1) {
+        accordionFaqHeader.classList.add("active");
+        const accordionItemBody = accordionFaqHeader.nextElementSibling;
+        accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-minus");
+        accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-plus");
+    }
 })
