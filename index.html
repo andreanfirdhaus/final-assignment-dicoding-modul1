@@ -410,7 +410,7 @@
             style="gap: 124px">
             <div class="flex-basis flex flex-col-100">
                <header>
-                  <h2 class="text-large font-bold text-primary capitalize">
+                  <h2 class="text-large text-primary capitalize">
                      Frequently Asked Question
                   </h2>
                   <p class="text-primary text-paragraph">
@@ -490,14 +490,12 @@
             </figure>
          </section>
 
-         <!-- <section id="blog" class="container flex flex-col">
+         <section id="blog" class="container flex flex-col-100">
             <header class="flex justify-between items-center">
-               <h2 class="text-primary font-medium text-large capitalize">
-                  Latest blog
-               </h2>
+               <h2 class="text-primary text-large capitalize">Latest blog</h2>
                <div class="flex gap-4">
-                  <i class="fa-solid fa-arrow-left"></i>
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i class="fa-solid fa-arrow-left" onclick="prevSlide()"></i>
+                  <i class="fa-solid fa-arrow-right" onclick="prevSlide()"></i>
                </div>
             </header>
             <ul class="carousel">
@@ -506,7 +504,7 @@
                      <img src="../assets/image/blog1.jpg" alt="fuck uu" />
                   </div>
                   <div class="card-desc">
-                     <a href="#" class="text-primary font-medium text-medium">
+                     <a href="#" class="text-primary font-semibold text-20px">
                         What You Should Know About Dog & Cat Grooming
                      </a>
                      <p class="text-primary-400">
@@ -520,7 +518,7 @@
                      <img src="../assets/image/blog2.jpg" alt="fuck uu" />
                   </div>
                   <div class="card-desc">
-                     <a href="#" class="text-primary font-medium text-medium">
+                     <a href="#" class="text-primary font-semibold text-20px">
                         Top-Rated Feline Feasts of 2024: CarePet's Picks
                      </a>
                      <p class="text-primary-400">
@@ -534,7 +532,7 @@
                      <img src="../assets/image/blog3.jpg" alt="fuck uu" />
                   </div>
                   <div class="card-desc">
-                     <a href="#" class="text-primary font-medium text-medium">
+                     <a href="#" class="text-primary font-semibold text-20px">
                         Simple health checks you can do with your pet at home
                      </a>
                      <p class="text-primary-400">
@@ -548,7 +546,7 @@
                      <img src="../assets/image/blog1.jpg" alt="fuck uu" />
                   </div>
                   <div class="card-desc">
-                     <a href="#" class="text-primary font-medium text-medium">
+                     <a href="#" class="text-primary font-semibold text-20px">
                         What You Should Know About Dog & Cat Grooming
                      </a>
                      <p class="text-primary-400">
@@ -558,31 +556,24 @@
                   </div>
                </li>
             </ul>
-            <div class="flex flex-col gap-8" style="width: 35%"></div>
-         </section> -->
+         </section>
 
-         <!-- <section id="bottom-hero" class="container-fluid flex justify-center">
-            <div class="container flex flex-col items-center gap-12">
-               <header
-                  class="flex flex-col justify-center text-center"
-                  style="width: 75%">
-                  <h2 class="text-primary font-medium text-large capitalize">
-                     Reach out to our Customer Service for further discussion.
-                  </h2>
-                  <p class="text-primary-400">
-                     Lorem Ipsum has been the industry's standard dummy text
-                     ever since the 1500s, when an unknown printer took a galley
-                     of.
-                  </p>
-               </header>
-               <div>
-                  <button
-                     class="btn btn-md bg-pink-red rounded-full text-neutral-00">
-                     Contact us
-                  </button>
-               </div>
-            </div>
-         </section> -->
+         <section
+            id="bottom-hero"
+            class="container-fluid-img flex flex-col-100 justify-center items-center text-center gap-12">
+            <header>
+               <h2 class="text-large text-primary capitalize">
+                  Reach out to our Customer Service for further discussion.
+               </h2>
+               <p class="text-primary text-paragraph">
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a galley of.
+               </p>
+            </header>
+            <button class="btn btn-sm bg-primary rounded-full text-neutral-00">
+               Contact us
+            </button>
+         </section>
       </main>
 
       <footer class="container"></footer>
