@@ -50,18 +50,18 @@ accordionFaqHeader.forEach((accordionFaqHeader) => {
         ) {
             currentlyActive.classList.toggle("active");
             currentlyActive.nextElementSibling.style.maxHeight = 0;
+            currentlyActive.querySelector(".fa-solid").classList.toggle("fa-minus");
+            currentlyActive.querySelector(".fa-solid").classList.toggle("fa-plus");
         }
 
         accordionFaqHeader.classList.toggle("active");
         const accordionItemBody = accordionFaqHeader.nextElementSibling;
         if (accordionFaqHeader.classList.contains("active")) {
             accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-            accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-minus");
-            accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-plus");
         } else {
             accordionItemBody.style.maxHeight = 0;
-            accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-minus");
-            accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-plus");
         }
+        accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-minus");
+        accordionFaqHeader.querySelector(".fa-solid").classList.toggle("fa-plus");
     })
 })
