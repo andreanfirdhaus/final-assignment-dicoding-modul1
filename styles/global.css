@@ -219,7 +219,6 @@ section.container-fluid-img > div.container > div.flex > ul > li {
 }
 
 /* our-service */
-/* kode flexbox layout our services */
 .content {
   flex: 1 100%;
   border-radius: 16px;
@@ -305,8 +304,6 @@ section.container-fluid-img > div.container > div.flex > ul > li {
   padding: 8px 0 8px 8px;
 }
 
-/* kode flexbox layout our services */
-
 /* faq */
 section#faq > div > header > h2 {
   max-width: 90%;
@@ -343,6 +340,9 @@ section#blog > header > h2 {
 }
 
 /* bottom-hero */
+#bottom-hero {
+  min-height: 563px;
+}
 section#bottom-hero header > h2 {
   max-width: 75%;
   margin: auto;
@@ -382,11 +382,7 @@ div.card-desc a:hover {
 .card-desc > p {
   margin-top: 6px;
 }
-/* carousel */
 
-#bottom-hero {
-  min-height: 563px;
-}
 /*icon*/
 .check-mark {
   display: inline-block;
