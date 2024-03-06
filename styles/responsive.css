@@ -1,3 +1,19 @@
+/*
+  Less 348px for form input
+*/
+@media screen and (max-width: 348px) {
+  form {
+    background-color: transparent;
+  }
+  input[type="email"] {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
 /*  
   ##Device= Mobile   
 */

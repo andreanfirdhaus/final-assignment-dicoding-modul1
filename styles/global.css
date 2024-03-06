@@ -434,14 +434,11 @@ div.card-desc a:hover {
 .text-primary {
   color: var(--primary);
 }
-.text-primary-400 {
-  color: var(--primary--400);
+.text-primary-dark {
+  color: var(--primary-dark);
 }
 .text-neutral-00 {
   color: var(--neutral-00);
-}
-.text-neutral-40 {
-  color: var(--neutral-40);
 }
 .text-pink-red {
   color: var(--pink-red);
@@ -626,11 +623,12 @@ input:focus {
 }
 input[type="email"] {
   padding: 12px 18px;
-  color: var(--primary);
+  color: var(--primary-dark);
 }
 input[type="submit"] {
   background-color: var(--primary);
   color: var(--neutral-00);
   font-weight: 500;
   padding: 12px 20px;
+  cursor: pointer;
 }
