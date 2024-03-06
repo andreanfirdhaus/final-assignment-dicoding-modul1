@@ -113,7 +113,7 @@ div.container {
 }
 
 /* top-hero */
-section#top-hero > div > header {
+section#top-hero > article > header {
   max-width: 70%;
 }
 section#top-hero header > h1,
