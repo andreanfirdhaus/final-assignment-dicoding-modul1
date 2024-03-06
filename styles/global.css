@@ -1,27 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 :root {
-  --primary: #003459; /*!important*/
+  --primary: #003459;
   --primary--400: #335d7a;
   --primary-dark: #002a48;
-  --primary-medium: #00528c;
-  --primary-light: #0078cd;
   --secondary: #f7dba7;
-  --secondary-dark: #eec77e;
   --secondary-medium: #f1d092;
-  --secondary-light: #fceed5; /*!important*/
+  --secondary-light: #fceed5;
   --secondary-light-primary: #fdf5e5;
   --neutral-00: #fdfdfd;
-  --neutral-10: #ebeeef;
-  --neutral-20: #ccd1d2; /*!important*/
-  --neutral-40: #99a2a5;
-  --neutral-60: #667479;
-  --neutral-80: #242b33;
-  --blue: #00a7e7;
-  --orange: #ff912c;
-  --green: #34c759;
-  --pink-red: #ff564f; /*!important*/
+  --pink-red: #ff564f;
   --base-font: 0.875rem; /* 14px */
-  --paragraph-font: 1rem;
+  --paragraph-font: 1rem; /* 16px */
   --base-line-height: 1.5rem;
 }
 *,
@@ -631,4 +620,5 @@ input[type="submit"] {
   font-weight: 500;
   padding: 12px 20px;
   cursor: pointer;
+  float: right;
 }
