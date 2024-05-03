@@ -12,6 +12,18 @@
   input[type="submit"] {
     width: 100%;
   }
+
+  div.card1 > header.flex,
+  div.card2 > header.flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  div.card1 > p,
+  div.card2 > p {
+    text-align: center;
+  }
 }
 
 /*  
