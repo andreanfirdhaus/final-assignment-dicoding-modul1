@@ -7,3 +7,5 @@
 - [x] Menampilkan sebuah gambar di dalam elemen aside, gambar perlu dibuat menggunakan elemen img.
 - [x] Menyusun layout dengan menggunakan teknik flexbox, bukan float.
 - [x] Responsive web design.
+
+![alt text](./design-ui.jpg)
